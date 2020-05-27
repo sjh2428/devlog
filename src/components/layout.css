@@ -610,7 +610,7 @@ code:after,
 tt:before,
 tt:after {
   letter-spacing: -0.2em;
-  content: ' ';
+  content: '';
 }
 pre code:before,
 pre code:after,
@@ -622,4 +622,9 @@ pre tt:after {
   html {
     font-size: 100%;
   }
+}
+
+p code {
+  background-color: #ffdce0;
+  padding: 5px;
 }
