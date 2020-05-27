@@ -1,6 +1,7 @@
 ---
 title: 테스트 제목
 category: test
+date: 2020-05-27 17:20
 ---
 
 # Hi!

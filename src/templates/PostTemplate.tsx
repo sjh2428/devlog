@@ -1,7 +1,19 @@
 import React from 'react';
 import Layout from '../components/layout';
+import { ReplaceComponentRendererArgs } from 'gatsby';
 
-const PostTemplate: React.FC = React.memo((props) => {
+interface ITemplateProps<T> {
+  pageContext: ReplaceComponentRendererArgs['props'] & T;
+}
+
+interface IPostTemplateProps {
+  html: string;
+  title: string;
+  category: string;
+  date: string;
+}
+
+const PostTemplate: React.FC<ITemplateProps<IPostTemplateProps>> = React.memo((props) => {
   return (
     <Layout>
       <code>
