@@ -13,7 +13,7 @@ module.exports.createPages = async ({ actions, graphql }: CreatePagesArgs) => {
               title
               category
               date
-              path
+              subPath
             }
           }
         }
@@ -26,13 +26,13 @@ module.exports.createPages = async ({ actions, graphql }: CreatePagesArgs) => {
   if (data) {
     data.allMarkdownRemark.edges.forEach(({ node }) => {
       createPage({
-        path: `${node.frontmatter?.category}/${node.frontmatter?.title}`,
+        path: `${node.frontmatter?.category}/${node.frontmatter?.subPath}`,
         context: {
           html: node.html,
           title: node.frontmatter?.title,
           category: node.frontmatter?.category,
           date: node.frontmatter?.date,
-          path: node.frontmatter?.path,
+          subPath: node.frontmatter?.subPath,
         },
         component: require('path').resolve(__dirname, '../templates/PostTemplate.tsx'),
       });

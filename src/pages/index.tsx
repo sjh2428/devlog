@@ -13,7 +13,7 @@ const LatestPostListQuery = graphql`
           excerpt(truncate: true, pruneLength: 200)
           frontmatter {
             title
-            path
+            subPath
             category
             date(formatString: "YYYY-MM-DD HH:mm:ss")
           }
@@ -32,7 +32,7 @@ const IndexPage: React.FC = () => {
       <h1>최근 작성한 게시글 목록</h1>
       <ul>
         {data.allMarkdownRemark.edges.map(({ node }) => {
-          const path = `${node.frontmatter?.category}/${node.frontmatter?.path}`;
+          const path = `${node.frontmatter?.category}/${node.frontmatter?.subPath}`;
           return (
             <li key={node.id}>
               <h2>

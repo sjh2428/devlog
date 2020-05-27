@@ -11,14 +11,19 @@ interface IPostTemplateProps {
   title: string;
   category: string;
   date: string;
+  subPath: string;
 }
 
 const PostTemplate: React.FC<ITemplateProps<IPostTemplateProps>> = React.memo((props) => {
+  const { title, category, date, html } = props.pageContext;
   return (
     <Layout>
-      <code>
-        <pre>{JSON.stringify(props, null, 4)}</pre>
-      </code>
+      <h2>
+        {title} - {category}
+      </h2>
+      <h4>{date}</h4>
+      <hr />
+      <div dangerouslySetInnerHTML={{ __html: html }} />
     </Layout>
   );
 });
