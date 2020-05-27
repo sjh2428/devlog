@@ -5,6 +5,20 @@ module.exports = {
     author: `@gatsbyjs`,
   },
   plugins: [
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-highlight-code`,
+            options: {
+              terminal: 'carbon',
+              theme: 'Dracula',
+            },
+          },
+        ],
+      },
+    },
     `gatsby-plugin-graphql-codegen`,
     {
       resolve: 'gatsby-source-filesystem',
@@ -13,7 +27,6 @@ module.exports = {
         path: `${__dirname}/posts`,
       },
     },
-    `gatsby-transformer-remark`,
     `gatsby-plugin-typescript`,
     `gatsby-plugin-react-helmet`,
     {
