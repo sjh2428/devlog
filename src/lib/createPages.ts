@@ -13,6 +13,7 @@ module.exports.createPages = async ({ actions, graphql }: CreatePagesArgs) => {
               title
               category
               date
+              path
             }
           }
         }
@@ -31,6 +32,7 @@ module.exports.createPages = async ({ actions, graphql }: CreatePagesArgs) => {
           title: node.frontmatter?.title,
           category: node.frontmatter?.category,
           date: node.frontmatter?.date,
+          path: node.frontmatter?.path,
         },
         component: require('path').resolve(__dirname, '../templates/PostTemplate.tsx'),
       });
