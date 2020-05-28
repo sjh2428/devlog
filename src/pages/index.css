@@ -1,0 +1,29 @@
+ul.post-ul {
+  margin: 0;
+}
+
+li.post-li {
+  list-style-type: none;
+}
+
+a.post-link {
+  color: black;
+  text-decoration: none;
+}
+
+a.post-link > li > h2 {
+  display: inline-block;
+}
+
+a.post-link > li > h2::after {
+  content: '';
+  width: 0px;
+  height: 2px;
+  display: block;
+  background: black;
+  transition: all 0.2s linear;
+}
+
+a.post-link:hover > li > h2::after {
+  width: 100%;
+}
