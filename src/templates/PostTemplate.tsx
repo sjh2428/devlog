@@ -2,6 +2,7 @@ import React from 'react';
 import Layout from '../components/layout';
 import { ReplaceComponentRendererArgs } from 'gatsby';
 import { defineCustomElements as deckDeckGoHighlightElement } from '@deckdeckgo/highlight-code/dist/loader';
+import './PostTemplate.css';
 
 interface ITemplateProps<T> {
   pageContext: ReplaceComponentRendererArgs['props'] & T;
@@ -22,12 +23,12 @@ const PostTemplate: React.FC<ITemplateProps<IPostTemplateProps>> = React.memo((p
 
   return (
     <Layout>
-      <h2>
+      <h2 className="title">
         {title} - {category}
       </h2>
-      <h4>{date}</h4>
+      <p className="date">{date}</p>
       <hr />
-      <div dangerouslySetInnerHTML={{ __html: html }} />
+      <div className="post-body" dangerouslySetInnerHTML={{ __html: html }} />
     </Layout>
   );
 });
