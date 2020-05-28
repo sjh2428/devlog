@@ -19,6 +19,7 @@ const Layout = ({ children }) => {
       site {
         siteMetadata {
           title
+          author
         }
       }
     }
@@ -34,7 +35,7 @@ const Layout = ({ children }) => {
           padding: `0 1.0875rem 1.45rem`,
         }}>
         <main>{children}</main>
-        <Footer />
+        <Footer author={data.site.siteMetadata.author} />
       </div>
     </>
   );
