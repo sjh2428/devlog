@@ -5,8 +5,10 @@ import { Link } from 'gatsby';
 const NotFoundPage = () => {
   return (
     <Layout>
-      <h2>Not Found</h2>
-      <Link to="/">Go Back</Link>
+      <h2 style={{ display: 'flex', justifyContent: 'center' }}>Not Found Page</h2>
+      <Link to="/" style={{ display: 'flex', justifyContent: 'center' }}>
+        Go Back
+      </Link>
     </Layout>
   );
 };
