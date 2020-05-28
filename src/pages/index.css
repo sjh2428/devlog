@@ -4,6 +4,7 @@ ul.post-ul {
 
 li.post-li {
   list-style-type: none;
+  margin-bottom: 3rem;
 }
 
 a.post-link {
@@ -26,4 +27,8 @@ a.post-link > li > h2::after {
 
 a.post-link:hover > li > h2::after {
   width: 100%;
+}
+
+h2.post-title {
+  margin-bottom: 1rem;
 }
