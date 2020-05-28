@@ -35,8 +35,8 @@ const IndexPage: React.FC = () => {
         {data.allMarkdownRemark.edges.map(({ node }) => {
           const path = `${node.frontmatter?.category}/${node.frontmatter?.subPath}`;
           return (
-            <Link to={path} className="post-link">
-              <li key={node.id} className="post-li">
+            <Link key={node.id} to={path} className="post-link">
+              <li className="post-li">
                 <h2 className="post-title">{node.frontmatter?.title}</h2>
                 <p className="post-metadata">{node.frontmatter?.date}</p>
                 <p className="post-excerpt">{node.excerpt}</p>

@@ -25,10 +25,12 @@ a.post-link > li > h2::after {
   display: block;
   background: black;
   transition: all 0.3s ease-in-out;
+  opacity: 0;
 }
 
 a.post-link:hover > li > h2::after {
   width: 100%;
+  opacity: 1;
 }
 
 h2.post-title {
@@ -43,16 +45,19 @@ p.post-metadata {
 span.post-border {
   position: absolute;
   transition: all 0.3s ease-in-out;
+  opacity: 0;
 }
 
 li.post-li:hover > .border-left-top-to-left-down,
 li.post-li:hover > .border-right-down-to-right-top {
   height: 100%;
+  opacity: 1;
 }
 
 li.post-li:hover > .border-left-top-to-right-top,
 li.post-li:hover > .border-right-down-to-left-down {
   width: 100%;
+  opacity: 1;
 }
 
 span.border-left-top-to-left-down {
