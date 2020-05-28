@@ -4,7 +4,9 @@ ul.post-ul {
 
 li.post-li {
   list-style-type: none;
-  margin-bottom: 3rem;
+  margin-bottom: 2.5rem;
+  padding: 0.25rem;
+  position: relative;
 }
 
 a.post-link {
@@ -22,7 +24,7 @@ a.post-link > li > h2::after {
   height: 2px;
   display: block;
   background: black;
-  transition: all 0.2s linear;
+  transition: all 0.3s ease-in-out;
 }
 
 a.post-link:hover > li > h2::after {
@@ -30,5 +32,57 @@ a.post-link:hover > li > h2::after {
 }
 
 h2.post-title {
-  margin-bottom: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+p.post-metadata {
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+span.post-border {
+  position: absolute;
+  transition: all 0.3s ease-in-out;
+}
+
+li.post-li:hover > .border-left-top-to-left-down,
+li.post-li:hover > .border-right-down-to-right-top {
+  height: 100%;
+}
+
+li.post-li:hover > .border-left-top-to-right-top,
+li.post-li:hover > .border-right-down-to-left-down {
+  width: 100%;
+}
+
+span.border-left-top-to-left-down {
+  left: 0;
+  top: 0;
+  width: 2px;
+  height: 0px;
+  background-color: #009f3b;
+}
+
+span.border-left-top-to-right-top {
+  left: 0;
+  top: 0;
+  width: 0px;
+  height: 2px;
+  background-color: #009f3b;
+}
+
+span.border-right-down-to-left-down {
+  right: 0;
+  bottom: 0;
+  width: 0px;
+  height: 2px;
+  background-color: #009f3b;
+}
+
+span.border-right-down-to-right-top {
+  right: 0;
+  bottom: 0;
+  width: 2px;
+  height: 0px;
+  background-color: #009f3b;
 }

@@ -40,6 +40,10 @@ const IndexPage: React.FC = () => {
                 <h2 className="post-title">{node.frontmatter?.title}</h2>
                 <p className="post-metadata">{node.frontmatter?.date}</p>
                 <p className="post-excerpt">{node.excerpt}</p>
+                <span className="post-border border-left-top-to-left-down"></span>
+                <span className="post-border border-left-top-to-right-top"></span>
+                <span className="post-border border-right-down-to-left-down"></span>
+                <span className="post-border border-right-down-to-right-top"></span>
               </li>
             </Link>
           );
