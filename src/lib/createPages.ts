@@ -26,7 +26,7 @@ module.exports.createPages = async ({ actions, graphql }: CreatePagesArgs) => {
   if (data) {
     data.allMarkdownRemark.edges.forEach(({ node }) => {
       createPage({
-        path: `${node.frontmatter?.category}/${node.frontmatter?.subPath}`,
+        path: `${node.frontmatter?.subPath}`,
         context: {
           html: node.html,
           title: node.frontmatter?.title,

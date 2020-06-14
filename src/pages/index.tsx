@@ -33,7 +33,7 @@ const IndexPage: React.FC = () => {
       <h3>최근 작성한 게시글 목록</h3>
       <ul className="post-ul">
         {data.allMarkdownRemark.edges.map(({ node }) => {
-          const path = `${node.frontmatter?.category}/${node.frontmatter?.subPath}`;
+          const path = `${node.frontmatter?.subPath}`;
           return (
             <Link key={node.id} to={path} className="post-link">
               <li className="post-li">
