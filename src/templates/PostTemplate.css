@@ -1,6 +1,7 @@
 deckgo-highlight-code {
   --deckgo-highlight-code-scroll: hidden;
-  --deckgo-highlight-code-font-family: Fira Code;
+  --deckgo-highlight-code-font-family: Fira Code, Consolas, Monaco, Andale Mono, Ubuntu Mono,
+    monospace;
   --deckgo-highlight-code-font-size: 14px;
 }
 
