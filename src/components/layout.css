@@ -617,6 +617,8 @@ pre tt:after {
 }
 
 p code {
-  background-color: #ffdce0;
+  color: #da35be;
   padding: 5px;
+  border: 1px solid #da35be;
+  background-color: #ffffff;
 }
