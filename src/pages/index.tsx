@@ -43,10 +43,9 @@ const IndexPage: React.FC = () => {
   return (
     <Layout>
       <SEO title="Home" />
-      <h3>최근 작성한 게시글 목록</h3>
-      <ul>
+      <ul className="category-ul">
         {Array.from(categorySet).map((category) => {
-          return <li>{category}</li>;
+          return <li className="category-li">{category}</li>;
         })}
       </ul>
       <ul className="post-ul">
