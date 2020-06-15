@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link, graphql, useStaticQuery } from 'gatsby';
 
-import Layout from '../components/layout';
-import SEO from '../components/seo';
+import Layout from '../components/Layout';
+import SEO from '../components/SEO';
 import { Query } from '../../graphql-types';
 import './index.css';
 
@@ -27,12 +27,30 @@ const LatestPostListQuery = graphql`
 
 const IndexPage: React.FC = () => {
   const data = useStaticQuery<Query>(LatestPostListQuery);
+  const { edges } = data.allMarkdownRemark;
+
+  const categorySet: Set<string> = new Set();
+  edges.forEach(({ node }) => {
+    if (node.frontmatter && node.frontmatter.category) {
+      node.frontmatter.category.forEach((v) => {
+        if (v) {
+          categorySet.add(v.toLowerCase());
+        }
+      });
+    }
+  });
+
   return (
     <Layout>
       <SEO title="Home" />
       <h3>최근 작성한 게시글 목록</h3>
+      <ul>
+        {Array.from(categorySet).map((category) => {
+          return <li>{category}</li>;
+        })}
+      </ul>
       <ul className="post-ul">
-        {data.allMarkdownRemark.edges.map(({ node }) => {
+        {edges.map(({ node }) => {
           const path = `${node.frontmatter?.subPath}`;
           return (
             <Link key={node.id} to={path} className="post-link">
