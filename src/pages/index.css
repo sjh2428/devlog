@@ -37,7 +37,10 @@ h2.post-title {
   margin-bottom: 0.3rem;
 }
 
-p.post-metadata {
+p.post-date {
+  position: absolute;
+  right: 3px;
+  top: 0;
   font-size: 0.8rem;
   margin: 0;
 }

@@ -56,7 +56,7 @@ const IndexPage: React.FC = () => {
             <Link key={node.id} to={path} className="post-link">
               <li className="post-li">
                 <h2 className="post-title">{node.frontmatter?.title}</h2>
-                <p className="post-metadata">{node.frontmatter?.date}</p>
+                <p className="post-date">{node.frontmatter?.date}</p>
                 <p className="post-excerpt">{node.excerpt}</p>
                 <span className="post-border border-left-top-to-left-down"></span>
                 <span className="post-border border-left-top-to-right-top"></span>
