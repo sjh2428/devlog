@@ -1,9 +1,13 @@
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { COLOR } from '../lib/constants';
+import { COLOR } from '../../lib/constants';
 
-const Header = ({ siteTitle }) => (
+interface IHeaderProps {
+  siteTitle?: string;
+}
+
+const Header: React.FC<IHeaderProps> = ({ siteTitle }) => (
   <header
     style={{
       background: `${COLOR.MAIN}`,

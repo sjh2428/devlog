@@ -1,6 +1,10 @@
 import React from 'react';
 
-const Footer = ({ author }) => {
+interface IFooter {
+  author: string;
+}
+
+const Footer: React.FC<IFooter> = ({ author }) => {
   return (
     <footer style={{ paddingTop: '50px', textAlign: 'center' }}>
       © {author}, Built with
