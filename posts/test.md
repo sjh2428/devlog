@@ -1,6 +1,6 @@
 ---
 title: 테스트 제목
-category: ['test2']
+category: ['test2', 'test10']
 date: 2020-05-27 17:20
 subPath: test1
 ---
