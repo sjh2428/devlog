@@ -35,7 +35,7 @@ const IndexPage: React.FC = () => {
     if (node.frontmatter && node.frontmatter.category) {
       node.frontmatter.category.forEach((v) => {
         if (v) {
-          categorySet.add(v.toLowerCase());
+          categorySet.add(v);
         }
       });
     }
@@ -56,16 +56,18 @@ const IndexPage: React.FC = () => {
     <Layout>
       <SEO title="Home" />
       <ul className="category-ul">
-        {Array.from(categorySet).map((category) => {
-          return (
-            <li
-              key={category}
-              className={`category-li${selectedCategory[category] ? ' selected' : ''}`}
-              onClick={categoryClickHandler}>
-              {category}
-            </li>
-          );
-        })}
+        {Array.from(categorySet)
+          .sort()
+          .map((category) => {
+            return (
+              <li
+                key={category}
+                className={`category-li${selectedCategory[category] ? ' selected' : ''}`}
+                onClick={categoryClickHandler}>
+                {category}
+              </li>
+            );
+          })}
       </ul>
       <ul className="post-ul">
         {edges.map(({ node }) => {

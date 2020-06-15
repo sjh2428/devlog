@@ -11,10 +11,12 @@ li.category-li {
   float: left;
   list-style-type: none;
   margin: 0 0.8rem 0.5rem 0;
-  padding: 0 10px;
+  padding: 2px 10px 0 10px;
   border: 1px solid var(--main-color);
   border-radius: 5px;
   cursor: pointer;
+  -moz-user-select: none;
+  -webkit-user-select: none;
 }
 
 li.selected {
