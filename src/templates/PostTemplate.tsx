@@ -11,21 +11,18 @@ interface ITemplateProps<T> {
 interface IPostTemplateProps {
   html: string;
   title: string;
-  category: string;
   date: string;
   subPath: string;
 }
 
 const PostTemplate: React.FC<ITemplateProps<IPostTemplateProps>> = React.memo((props) => {
-  const { title, category, date, html } = props.pageContext;
+  const { title, date, html } = props.pageContext;
 
   deckDeckGoHighlightElement();
 
   return (
     <Layout>
-      <h2 className="title">
-        {title} - {category}
-      </h2>
+      <h2 className="title">{title}</h2>
       <p className="date">{date}</p>
       <hr />
       <div className="post-body" dangerouslySetInnerHTML={{ __html: html }} />
