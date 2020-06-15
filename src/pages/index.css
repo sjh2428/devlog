@@ -45,6 +45,10 @@ p.post-date {
   margin: 0;
 }
 
+p.post-excerpt {
+  font-size: 0.9rem;
+}
+
 span.post-border {
   position: absolute;
   transition: all 0.3s ease-in-out;
