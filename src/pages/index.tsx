@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, graphql, useStaticQuery } from 'gatsby';
 
 import Layout from '../components/Layout';
@@ -26,6 +26,7 @@ const LatestPostListQuery = graphql`
 `;
 
 const IndexPage: React.FC = () => {
+  const [selectedCategory, setSelectedCategory] = useState({});
   const data = useStaticQuery<Query>(LatestPostListQuery);
   const { edges } = data.allMarkdownRemark;
 
@@ -40,19 +41,37 @@ const IndexPage: React.FC = () => {
     }
   });
 
+  const categoryClickHandler = (e: React.MouseEvent<HTMLElement>) => {
+    const { textContent } = e.currentTarget;
+    if (textContent) {
+      if (selectedCategory[textContent]) {
+        setSelectedCategory({ ...selectedCategory, [textContent]: !selectedCategory[textContent] });
+      } else {
+        setSelectedCategory({ ...selectedCategory, [textContent]: true });
+      }
+    }
+  };
+
   return (
     <Layout>
       <SEO title="Home" />
       <ul className="category-ul">
         {Array.from(categorySet).map((category) => {
-          return <li className="category-li">{category}</li>;
+          return (
+            <li
+              key={category}
+              className={`category-li${selectedCategory[category] ? ' selected' : ''}`}
+              onClick={categoryClickHandler}>
+              {category}
+            </li>
+          );
         })}
       </ul>
       <ul className="post-ul">
         {edges.map(({ node }) => {
           const path = `${node.frontmatter?.subPath}`;
           return (
-            <Link key={node.id} to={path} className="post-link">
+            <Link key={node.id} to={`/${path}`} className="post-link">
               <li className="post-li">
                 <h2 className="post-title">{node.frontmatter?.title}</h2>
                 <p className="post-date">{node.frontmatter?.date}</p>

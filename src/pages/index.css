@@ -17,6 +17,11 @@ li.category-li {
   cursor: pointer;
 }
 
+li.selected {
+  background-color: var(--main-color);
+  color: white;
+}
+
 ul.category-ul {
   width: 100%;
   overflow: auto;
