@@ -12,7 +12,6 @@ interface IPostTemplateProps {
   html: string;
   title: string;
   date: string;
-  subPath: string;
 }
 
 const PostTemplate: React.FC<ITemplateProps<IPostTemplateProps>> = React.memo((props) => {
