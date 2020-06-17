@@ -16,7 +16,7 @@ const LatestPostListQuery = graphql`
             title
             subPath
             category
-            date(formatString: "YYYY-MM-DD HH:mm")
+            date(formatString: "YYYY-MM-DD")
           }
           id
         }
