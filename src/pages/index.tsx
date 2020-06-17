@@ -45,6 +45,7 @@ const getPosts = ({ selectedCategoryState, edges }: IGetPosts) => {
       ),
     );
   }
+  refinedEdges = refinedEdges.filter(({ node }) => node.frontmatter?.subPath !== 'about');
   return refinedEdges.map(({ node }) => {
     const path = `${node.frontmatter?.subPath}`;
     return (
