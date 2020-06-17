@@ -18,17 +18,31 @@ const Header: React.FC<IHeaderProps> = ({ siteTitle }) => (
         margin: `0 auto`,
         maxWidth: 650,
         padding: `1rem 1.0875rem`,
+        display: 'flex',
+        justifyContent: 'space-between',
       }}>
-      <h1 style={{ margin: 0 }}>
+      <div>
         <Link
           to="/"
           style={{
             color: `white`,
             textDecoration: `none`,
+            fontSize: '1.5rem',
           }}>
           {siteTitle}
         </Link>
-      </h1>
+      </div>
+      <div>
+        <Link
+          to="/about"
+          style={{
+            color: `white`,
+            textDecoration: `none`,
+            fontSize: '1.5rem',
+          }}>
+          About
+        </Link>
+      </div>
     </div>
   </header>
 );
