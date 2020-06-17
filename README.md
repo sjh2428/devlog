@@ -16,5 +16,6 @@
 - [ ] index 페이지의 Layout 구상
 - [ ] 포스트 내용 Layout 구상
 - [ ] 헤더부분이 좀 밋밋한듯..?
+- [ ] About 페이지 작성
 
 Built with Gatsby
