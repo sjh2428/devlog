@@ -616,7 +616,7 @@ pre tt:after {
   }
 }
 
-p code {
+code {
   color: #da35be;
   padding: 5px;
   border: 1px solid #da35be;
