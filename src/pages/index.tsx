@@ -97,7 +97,7 @@ const IndexPage: React.FC = () => {
   return (
     <Layout>
       <SEO title="Home" />
-      <ul className="category-ul">
+      {/* <ul className="category-ul">
         {Array.from(categorySet)
           .sort()
           .map((category) => {
@@ -111,7 +111,8 @@ const IndexPage: React.FC = () => {
             );
           })}
       </ul>
-      <ul className="post-ul">{getPosts({ selectedCategoryState, edges })}</ul>
+      <ul className="post-ul">{getPosts({ selectedCategoryState, edges })}</ul> */}
+      <h2 style={{ textAlign: 'center' }}>{'유지보수중입니다.'}</h2>
     </Layout>
   );
 };
