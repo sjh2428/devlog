@@ -10,7 +10,7 @@ subPath: about
 
 ### <center>보유 기술</center>
 
-- Javascript, Typescript, React, Redux, Redux-saga
+- Javascript, Typescript, React, Redux
 - Node.js, Express, MySQL, Sequelize
 - Mocha
 - Linux Ubuntu
@@ -49,9 +49,9 @@ _<center>2018.07.02 ~ 2018.08.17</center>_
 
 [간단 소개]
 
-- 기숙사 고층 거주 인원은 지하 1층 `세탁실에 접근성이 좋지 않았음`
-- 내려가면 많은 인원이 대기하고 있고 모든 세탁기가 동작중이었음
-- `어플로 미리 남은 시간을 알면 좋겠다`는 아이디어에서 프로젝트 시작
+- 기숙사 고층 거주 인원은 지하 1층 `세탁실 접근성이 좋지 않았음`
+- 내려가면 많은 인원이 대기하고 있고 모든 세탁기가 동작중인 상황이 일상다반사
+- `어플로 미리 남은 시간을 알면 좋겠다`는 아이디어에서 프로젝트 주제로 확정
 
 [기술 스택]
 
