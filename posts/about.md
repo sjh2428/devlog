@@ -1,19 +1,40 @@
 ---
-title: 성재호 - Fullstack Developer
+title:
 category: []
 subPath: about
 ---
 
 ### <center>About Me</center>
 
+#### <center>1995.12.07 성재호(26세)</center>
+
+**_<center>(Frontend || Backend) && Developer</center>_**
+
+<center>pok_gare@naver.com</center><br />
+
+반갑습니다! 저는 풀스택 개발을 좋아하며 55:45로 백엔드를 약간 더 선호합니다.
+
+주력 언어로는 Javascript(ES6)이며 최근에는 Java/Spring에 흥미를 느끼고 있습니다.
+
 ---
 
 ### <center>보유 기술</center>
 
-- Javascript, Typescript, React, Redux
-- Node.js, Express, MySQL, Sequelize
+- Javascript(ES6), Typescript, React, Redux
+- Node.js, Sequelize
+- MySQL
 - Mocha
 - Linux Ubuntu
+
+---
+
+### <center>학력</center>
+
+**<center>고려대학교 세종캠퍼스 컴퓨터정보학과</center>**
+_<center>2018.03 ~ 2021.02_ [휴학]</center>
+
+**<center>동양미래대학교 컴퓨터정보공학과</center>**
+_<center>2014.03 ~ 2018.02_ [졸업]</center>
 
 ---
 
@@ -75,11 +96,3 @@ _<center>2018.07.02 ~ 2018.08.17</center>_
 _<center>https://bit.ly/2C7CYnw</center>_
 
 ---
-
-### <center>학력</center>
-
-**<center>고려대학교 세종캠퍼스 컴퓨터정보학과</center>**
-_<center>2018.03 ~ 2021.02_ [휴학]</center>
-
-**<center>동양미래대학교 컴퓨터정보공학과</center>**
-_<center>2014.03 ~ 2018.02_ [졸업]</center>
